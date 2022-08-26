@@ -13,7 +13,8 @@
 
 > open the file with vim and do `:PluginInstall` in command mode. </br>
 > wait until all plugin finish installing and it say Done.
-> 
+![PluginInstall](https://github.com/alimehr75/Linux-Config/blob/master/Vim/PluginInstall.png?raw=true)
+
 ### For install the YCM plugin you can do it manually:
 
 [YouCompleteMe: a code-completion engine for Vim](https://github.com/ycm-core/YouCompleteMe#installation)
@@ -21,9 +22,9 @@
 [Installation in Linux 64-bit](https://github.com/ycm-core/YouCompleteMe#linux-64-bit)
 
 
-## Theme One-Dark
+## OneDark Theme 
 
-[one-dark theme]()
+[one-dark theme](https://github.com/alimehr75/Linux-Config/blob/master/Vim/onedark.vim)
 
 > For adding this theme to your vim : </br>
 > `mkdir /home/$USER/.vim/autoload` </br>
@@ -64,3 +65,4 @@ function! onedark#GetColors()
   return s:colors
 endfunction
 ```
+![OneDark Theme](https://github.com/alimehr75/Linux-Config/blob/master/Vim/OneDark_Theme.png?raw=true)
