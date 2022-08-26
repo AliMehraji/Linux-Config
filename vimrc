@@ -1,0 +1,113 @@
+set nocompatible              " required
+filetype off                  " required
+
+" ======== set the runtime path to include Vundle and initialize ======
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+"
+" ======= let Vundle manage Vundle, required ==========================
+
+" ======= add all your plugins here ===================================
+
+" (note older versions of Vundle used Bundle instead of Plugin)
+
+call vundle#begin()            " required
+
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'vim-scripts/indentpython.vim'
+Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'sheerun/vim-polyglot'
+Bundle 'Valloric/YouCompleteMe'
+
+
+
+" ...
+
+" All of your Plugins must be added before the following line
+
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+
+" =====================  Customize mapping =========================
+
+" Mappleader is space
+let mapleader = "\<space>" 
+
+" ycm-core/YouCompleteMe
+let g:Ycm_python_binary_path='python3'
+let g:ycm_autoclose_preview_window_after_completion=1
+map <leader>g :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+" Nerdtree mappings. nt = toggle, nf = find.
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
+" Commenting Lines 
+nnoremap <Leader># :normal I#<Esc>
+
+
+" ======= global sets ======================================================
+"Turn on syntax highlighting.
+syntax on
+
+set encoding=utf-8
+
+au BufNewFile,BufRead *.py
+    \set tabstop=4
+    \set softtabstop=4
+    \set shiftwidth=4
+    \set textwidth=79
+    \set expandtab
+    \set autoindent
+    \set fileformat=unix
+
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+ highlight BadWhitespace ctermbg=red guibg=darkred
+
+let python_highlight_all=1
+
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+set number             " Show line number
+set showmatch          " Highlight matches {[()]}
+set history=1000
+set undolevels=1000
+set wildignore=*.swp,*.bak,*.pyc
+set ignorecase
+au FileType python setlocal formatprg=autopep8\ -
+
+
+" =============== Tmux ================================================================
+
+"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
+"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
+"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+if (empty($TMUX))
+  if (has("nvim"))
+    "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
+    let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+  endif
+  "For Neovim > 0.1.5 and Vim > patch 7.4.1799 < https://github.com/vim/vim/commit/61be73bb0f965a895bfb064ea3e55476ac175162 >
+  "Based on Vim patch 7.4.1770 (`guicolors` option) < https://github.com/vim/vim/commit/8a633e3427b47286869aa4b96f2bfc1fe65b25cd >
+  " < https://github.com/neovim/neovim/wiki/Following-HEAD#20160511 >
+  if (has("termguicolors"))
+    set termguicolors
+  endif
+endif
+
+" ======================= atom one dark scheme ==============================
+let g:onedark_hide_endofbuffer=1
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+
+colorscheme onedark
