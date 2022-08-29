@@ -66,3 +66,46 @@ function! onedark#GetColors()
 endfunction
 ```
 ![OneDark Theme](https://github.com/alimehr75/Linux-Config/blob/master/Vim/OneDark_Theme.png?raw=true)
+
+
+## Vim & Yaml 
+> vim has a little problem with yaml,yml files  
+### [yaml.vim : Syntax coloring and functions for YAML](https://www.vim.org/scripts/script.php?script_id=739)
+
+### Here is the above file script 
+
+```vim
+" To make this file do stuff, add something like the following (without the
+" leading ") to your ~/.vimrc:
+" au BufNewFile,BufRead *.yaml,*.yml so ~/src/PyYaml/YAML.vim
+
+" Vim syntax/macro file
+" Language: YAML
+" Author: Igor Vergeichik <iverg@mail.ru>
+" Sponsor: Tom Sawyer <transami@transami.net>
+" Stayven: Ryan King <jking@panoptic.com>
+" Copyright (c) 2002 Tom Saywer
+
+" Add an item to a gangly list:
+"map , o<bs><bs><bs><bs>-<esc>o
+" Convert to Canonical form:
+"map \c :%!python -c 'from yaml.redump import redump; import sys; print redump(sys.stdin.read()).rstrip()'
+
+if version < 600 
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
+endif
+syntax clear
+
+syn match yamlDelimiter "[:,-]"
+syn match yamlBlock "[\[\]\{\}\|\>]"
+syn match yamlOperator "[?^+-]\|=>"
+
+syn region yamlComment  start="\#" end="$"
+syn match yamlIndicator "#YAML:\S\+"
+
+```
+
+### [Wrong indentation when editing Yaml in Vim](https://stackoverflow.com/questions/26962999/wrong-indentation-when-editing-yaml-in-vim)
+

@@ -111,3 +111,7 @@ let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 
 colorscheme onedark
+
+" ======================== Yaml Configs ===================================
+autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
+au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
