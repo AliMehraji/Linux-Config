@@ -1,14 +1,13 @@
 set nocompatible              " required
 filetype off                  " required
 
-" ======== set the runtime path to include Vundle and initialize ======
+" ======== set the runtime path to include Vundle and initialize ====== 
 
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
 " alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-"
+" call vundle"begin('~/some/path/here')
+" 
 " ======= let Vundle manage Vundle, required ==========================
 
 " ======= add all your plugins here ===================================
@@ -56,11 +55,16 @@ nnoremap <Leader># :normal I#<Esc>
 
 
 " ======= global sets ======================================================
-"Turn on syntax highlighting.
+" Formatting {
 syntax on
-
 set encoding=utf-8
+" set termguicolors
+set nowrap
+set showmode
+set autowrite
+" }
 
+" Python PEP8
 au BufNewFile,BufRead *.py
     \set tabstop=4
     \set softtabstop=4
@@ -84,8 +88,32 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc
 set ignorecase
-au FileType python setlocal formatprg=autopep8\ -
 
+
+" ======================= atom one dark scheme ==============================
+let g:onedark_hide_endofbuffer=1
+let g:onedark_termcolors=256
+let g:onedark_terminal_italics=1
+
+colorscheme onedark
+set background=dark
+
+" JS, HTML, CSS, YAML, JSON
+au BufNewFile, BufRead *.js, *.html, *.css, *.yml, *.yaml, *.json
+    \ set tabstop=2
+    \ set softtabstop=2
+    \ set shiftwidth=2
+" autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
+" au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
+
+" From Ashkan Kamyab
+" https://github.com/ashkankamyab/huebsh/blob/master/huebsh/.vimrc
+
+" Enable Folding
+set foldmethod=indent
+set foldlevel=99
+" Enable Folding with the spacebar
+nnoremap <space> za
 
 " =============== Tmux ================================================================
 
@@ -104,14 +132,3 @@ if (empty($TMUX))
     set termguicolors
   endif
 endif
-
-" ======================= atom one dark scheme ==============================
-let g:onedark_hide_endofbuffer=1
-let g:onedark_termcolors=256
-let g:onedark_terminal_italics=1
-
-colorscheme onedark
-
-" ======================== Yaml Configs ===================================
-autocmd FileType yaml,yml setlocal ts=2 sts=2 sw=2 expandtab
-au BufNewFile,BufRead *.yaml,*.yml so ~/.vim/yaml.vim
