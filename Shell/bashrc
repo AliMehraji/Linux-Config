@@ -1,0 +1,51 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+fi
+export PATH
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
+
+#alis
+alias c='clear'
+alias tmp='cd /tmp'
+
+## install with dnf
+alias dnfi="sudo dnf install"
+alias update="sudo dnf update"
+alias updatey="sudo dnf update -y"
+alias down='cd ~/Downloads/'
+
+## shutdown 
+alias po='poweroff'
+alias re='reboot'
+
+## Use a long listing format ##
+alias ll='ls -ltrha'
+
+# handy short cuts #
+alias h='history'
+alias cat='cat -nb'
+alias vpn="systemctl start wg-quick@USA"
+alias vpnd="systemctl stop wg-quick@USA"
+export EDITOR=/usr/bin/vim
