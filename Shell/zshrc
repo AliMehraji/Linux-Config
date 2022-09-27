@@ -107,12 +107,11 @@ alias po='poweroff'
 alias re='reboot'
 ## Use a long listing format ##
 alias ll='ls -ltrha'
-# handy short cuts #
-alias vpn="systemctl start wg-quick@USA"
-alias vpnd="systemctl stop wg-quick@USA"
 
 zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 fpath=(~/.zsh $fpath)
 
 export EDITOR=/usr/bin/vim
+
+
