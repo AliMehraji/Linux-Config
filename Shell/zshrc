@@ -103,7 +103,7 @@ export LANG=en_US.UTF-8
 alias dnfi="sudo dnf install"
 alias update="sudo dnf update -y"
 ## shutdown 
-alias po='poweroff'
+alias po='shutdown --poweroff'
 alias re='reboot'
 ## Use a long listing format ##
 alias ll='ls -ltrha'
@@ -113,5 +113,6 @@ zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 fpath=(~/.zsh $fpath)
 
 export EDITOR=/usr/bin/vim
-
-
+alias proxychains4='sudo /usr/local/bin/proxychains4'
+#export HTTP_PROXY="http://127.0.0.1:1081"
+#export HTTPS_PROXY="http://127.0.0.1:1081"
