@@ -96,7 +96,7 @@ let g:onedark_terminal_italics=1
 colorscheme onedark
 
 " JS, HTML, CSS, YAML, JSON
-au BufNewFile, BufRead *.js, *.html, *.css, *.yml, *.yaml, *.json
+au BufNewFile,BufRead *.js, *.html, *.css, *.yml, *.yaml, *.json
     \ set tabstop=2
     \ set softtabstop=2
     \ set shiftwidth=2
