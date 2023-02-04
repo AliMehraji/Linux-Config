@@ -107,12 +107,21 @@ alias po='shutdown --poweroff'
 alias re='reboot'
 ## Use a long listing format ##
 alias ll='ls -ltrha'
-
+alias c='clear'
+## Git Aliases
+alias gladog='git log --all --decorate --oneline --graph'
 zstyle ':completion:*:*:git:*' script ~/.git-completion.bash
 
 fpath=(~/.zsh $fpath)
 
 export EDITOR=/usr/bin/vim
-alias proxychains4='sudo /usr/local/bin/proxychains4'
-#export HTTP_PROXY="http://127.0.0.1:1081"
-#export HTTPS_PROXY="http://127.0.0.1:1081"
+alias proxychains4='/usr/local/bin/proxychains4'
+#export HTTP_PROXY="http://127.0.0.1:10809"
+#export HTTPS_PROXY="http://127.0.0.1:10809"
+# WeAreMahsaAmini
+#export HTTPS_PROXY=http://127.0.0.1:8118/
+#export HTTP_PROXY=http://127.0.0.1:8118/
+#export https_proxy=http://127.0.0.1:8118/
+#export http_proxy=http://127.0.0.1:8118/
+#export ALL_PROXY=socks://127.0.0.1:1080/
+#export all_proxy=socks://127.0.0.1:1080/
