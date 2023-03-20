@@ -35,6 +35,7 @@ alias dnfi="sudo dnf install"
 alias update="sudo dnf update"
 alias updatey="sudo dnf update -y"
 alias down='cd ~/Downloads/'
+alias yt-dlp='yt-dlp --proxy socks5://127.0.0.1:33550'
 
 ## shutdown 
 alias po='poweroff'
