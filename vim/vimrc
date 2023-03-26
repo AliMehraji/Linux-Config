@@ -129,3 +129,7 @@ nnoremap <space> za
 "    set termguicolors
 "  endif
 "endif
+
+" ========= Shell Script Template =====================================================
+
+au bufnewfile *.sh 0r $HOME/.vim/sh_header.temp
