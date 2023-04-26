@@ -86,6 +86,7 @@ set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc
 set ignorecase
+" set spell
 
 
 " ======================= atom one dark scheme ==============================
@@ -133,3 +134,5 @@ nnoremap <space> za
 " ========= Shell Script Template =====================================================
 
 au bufnewfile *.sh 0r $HOME/.vim/sh_header.temp
+au bufnewfile *.yml 0r $HOME/.vim/YAML.temp
+au bufnewfile *.yaml 0r $HOME/.vim/YAML.temp
