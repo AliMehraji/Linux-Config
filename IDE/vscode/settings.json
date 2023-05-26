@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Atom One Dark",
-    "editor.fontSize": 17,
+    "editor.fontSize": 15,
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "workbench.statusBar.visible": false,
@@ -8,10 +8,10 @@
     "terminal.integrated.fontFamily": "Fira Code",
     "redhat.telemetry.enabled": true,
     "editor.mouseWheelZoom": true,
-    "debug.console.fontSize": 17,
-    "scm.inputFontSize": 17,
+    "debug.console.fontSize": 15,
+    "scm.inputFontSize": 15,
     "editor.fontWeight": "normal",
-    "terminal.integrated.fontSize": 17,
+    "terminal.integrated.fontSize": 15,
     "window.zoomLevel": 1,
     "python.envFile": "${workspaceFolder}/.venv",
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
@@ -21,6 +21,7 @@
     "python.analysis.completeFunctionParens": true,
     "python.analysis.autoImportCompletions": true,
     "python.linting.pylintArgs": ["--errors-only"],
-    "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint"
+    "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
+    "ansible.python.interpreterPath": "/home/robot/Projects/.venv/bin/python"
 
 }
