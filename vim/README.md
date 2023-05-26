@@ -2,18 +2,24 @@
 
 ## At first install Vundle for adding the plugins :
 
-> `git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim`
+```
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+```
 
-## Use vimrc file 
+## Use .vimrc file 
 > create a file named .vimrc in your home directory </br>
-> `touch /home/$USER/.vimrc` </br>
+```
+touch /home/$USER/.vimrc
+```
 > then copy its content to that file </br>
 
-## install plugins 
+## Install plugins 
 
-> open the file with vim and do `:PluginInstall` in command mode. </br>
-> wait until all plugin finish installing and it say Done.
-![PluginInstall](https://github.com/alimehr75/Linux-Config/blob/master/Vim/PluginInstall.png?raw=true)
+> open the file with vim and do `:PluginInstall` in command mode.
+> 
+> wait until all plugin installed.
+
+![PluginInstall](https://github.com/AliMehraji/Linux-Config/blob/master/vim/PluginInstall.png?raw=true)
 
 ### For install the YCM plugin you can do it manually:
 
@@ -24,10 +30,13 @@
 
 ## OneDark Theme 
 
-[one-dark theme](https://github.com/AliMehraji/Linux-Config/blob/master/vim/OneDark_Theme.png)
+[one-dark theme](https://github.com/AliMehraji/Linux-Config/blob/master/vim/OneDark_Theme.png?raw=true)
 
 > For adding this theme to your vim : </br>
-> `mkdir /home/$USER/.vim/autoload` </br>
+```
+mkdir /home/$USER/.vim/autoload
+```
+</br>
 > Copy the file to the created directory 
 
 
@@ -65,7 +74,7 @@ function! onedark#GetColors()
   return s:colors
 endfunction
 ```
-![OneDark Theme](https://github.com/alimehr75/Linux-Config/blob/master/Vim/OneDark_Theme.png?raw=true)
+
 
 
 ## Vim & Yaml 
