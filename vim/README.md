@@ -24,7 +24,7 @@
 
 ## OneDark Theme 
 
-[one-dark theme](https://github.com/alimehr75/Linux-Config/blob/master/Vim/onedark.vim)
+[one-dark theme](https://github.com/AliMehraji/Linux-Config/blob/master/vim/OneDark_Theme.png)
 
 > For adding this theme to your vim : </br>
 > `mkdir /home/$USER/.vim/autoload` </br>
