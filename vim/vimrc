@@ -131,8 +131,8 @@ nnoremap <space> za
 "  endif
 "endif
 
-" ========= Shell Script Template =====================================================
+" +========= Shell Script Template =====================================================
 
-au bufnewfile *.sh 0r $HOME/.vim/sh_header.temp
+au bufnewfile *.sh 0r $HOME/.vim/SHELL_HEADER.temp
 au bufnewfile *.yml 0r $HOME/.vim/YAML.temp
 au bufnewfile *.yaml 0r $HOME/.vim/YAML.temp
