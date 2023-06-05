@@ -37,7 +37,7 @@ cp vimrc $HOME/.vimrc
 </br></br>
 
 ```
-mkdir $HOME/.vim/autoload
+mkdir $HOME/.vim/colors
 ```
 > Copy the file to the created directory `onedark.vim` named file
 
