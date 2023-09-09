@@ -1,0 +1,33 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "geerlingguy/debian10"
+  config.ssh.insert_key = false
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  # config.apt_proxy.http = "socks5://192.168.1.103:58297"
+  # config.apt_proxy.https = "socks5://192.168.1.103:58297"
+
+  config.vm.provider :virtualbox do |v|
+    v.memory = 512
+    v.linked_clone = true
+  end
+
+  # App Server 1
+  config.vm.define "app1" do |app|
+    app.vm.hostname = "orc.app1.test"
+    app.vm.network :public_network, ip: "192.168.1.120"
+  end
+
+  # App Server 2
+  config.vm.define "app2" do |app|
+    app.vm.hostname = "orc.app2.test"
+    app.vm.network :public_network, ip: "192.168.1.121"
+  end
+
+  # DB Server
+  config.vm.define "db" do |db|
+    db.vm.hostname = "orc.db.test"
+    db.vm.network :public_network, ip: "192.168.1.122"
+  end
+
+
+end
