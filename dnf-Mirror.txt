@@ -1,0 +1,5 @@
+sudo sed "s|=\$basearch$|=\$basearch\&country=US,DE,CA,FR,global|" /etc/yum.repos.d/* -i
+sudo echo "fastestmirror=true" >> /etc/dnf/dnf.conf
+sudo echo "max_parallel_downloads=20" >> /etc/dnf/dnf.conf
+sudo echo "deltarpm=1" >> /etc/dnf/dnf.conf
+sudo echo "ip_resolve=4" >> /etc/dnf/dnf.conf
