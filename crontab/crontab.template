@@ -11,3 +11,10 @@ MAILTO=root
 # |  |  |  |  |
 # *  *  *  *  * user-name  command to be executed
 
+# Our own Scripts which all are gonna be running at 2am 
+# So make a directory whereever named cron.daily.2am (name could be everything)
+# Notice :
+#     All Scripts in that directory must have not contain .sh extension
+#     All Scripts have to be executable 
+
+00 02 * * * run-parts --report $HOME/cron.daily.2am 
