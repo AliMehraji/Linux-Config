@@ -126,6 +126,7 @@ source "$OSH"/oh-my-bash.sh
 # fi
 
 export EDITOR="vim"
+export PATH=$HOME/.nami/bin:$HOME/.local/bin:$PATH
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -144,3 +145,10 @@ export EDITOR="vim"
 alias code='code --proxy-server=socks5://127.0.0.1'
 alias re='reboot'
 alias po='shutdown --poweroff'
+# ------ V2ray ---------------
+alias Dv2ray='$HOME/V2ray-Cli/v2ray-Proxy-Vpn-V5.sh $HOME/V2ray-Cli/DE-Trojan-KCP.json'
+alias Tv2ray='$HOME/V2ray-Cli/v2ray-Proxy-Vpn-V5.sh $HOME/V2ray-Cli/TR-Trojan-KCP.json'
+# ------ Joker ---------------
+alias Dbrook='joker brook client -s 5.75.201.128:49802 -p Ali@Mehr9567! --socks5 0.0.0.0:58297'
+alias Tbrook='joker brook client -s 185.136.206.186:49802 -p Ali@Mehr9567! --socks5 0.0.0.0:58297'
+
