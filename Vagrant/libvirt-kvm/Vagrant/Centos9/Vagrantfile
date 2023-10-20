@@ -1,0 +1,29 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/centos9s"
+  config.ssh.insert_key = false
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.vm.provision "shell", inline: <<-SHELL
+    echo 'YOUR_PUBLIC_SSH_KEY' >> /home/vagrant/.ssh/authorized_keys
+    chmod 600 /home/vagrant/.ssh/authorized_keys
+    chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
+  SHELL
+
+  config.vm.provider :libvirt do |libvirt|
+    libvirt.memory = 2048
+    libvirt.cpus = 1  # Set the number of CPUs
+    # v.cpusize = 1024  # Set the CPU execution cap (in percentage)
+  end
+
+  # App Server 1
+  config.vm.define "CentOS-1" do |app1|
+    app1.vm.hostname = "CentOS-1.Fun"
+    app1.vm.network :private_network, type: "static", ip: "192.168.121.10", bridge: "virbr0"
+  end
+
+  # App Server 2
+  config.vm.define "CentOS-2" do |app2|
+    app2.vm.hostname = "CentOS-2.Fun"
+    app2.vm.network :private_network, type: "static", ip: "192.168.121.11", bridge: "virbr0"
+  end
+
+end
