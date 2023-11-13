@@ -17,11 +17,7 @@
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
-    "terminal.integrated.defaultProfile.osx": "zsh",
     "python.analysis.completeFunctionParens": true,
     "python.analysis.autoImportCompletions": true,
-    "python.linting.pylintArgs": ["--errors-only"],
-    "python.linting.pylintPath": "${workspaceFolder}/.venv/bin/pylint",
-    "ansible.python.interpreterPath": "/home/robot/Projects/.venv/bin/python"
 
 }
