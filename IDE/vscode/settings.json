@@ -12,12 +12,19 @@
     "scm.inputFontSize": 15,
     "editor.fontWeight": "normal",
     "terminal.integrated.fontSize": 15,
-    "window.zoomLevel": 1,
     "python.envFile": "${workspaceFolder}/.venv",
     "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.autoImportCompletions": true,
-
+    "workbench.startupEditor": "none",
+    "breadcrumbs.enabled": false,
+    "editor.renderWhitespace": "all",
+    "git.autofetch": true,
+    "window.zoomLevel": 1,
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8",
+      "editor.formatOnSave": true
+    }
 }
