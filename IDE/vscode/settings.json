@@ -12,15 +12,20 @@
     "scm.inputFontSize": 15,
     "editor.fontWeight": "normal",
     "terminal.integrated.fontSize": 15,
-    "python.linting.enabled": true,
-    "python.linting.pylintEnabled": true,
+    "window.zoomLevel": 1,
     "python.analysis.completeFunctionParens": true,
     "python.analysis.autoImportCompletions": true,
     "workbench.startupEditor": "none",
+    "ansible.python.interpreterPath": "/usr/bin/python3",
+    "ansible.ansible.path": "/usr/bin/ansible",
+    "ansible.ansibleLint.path": "/usr/bin/ansible-lint",
+    "ansible.ansibleLint.enabled": true,
     "breadcrumbs.enabled": false,
     "editor.renderWhitespace": "all",
+    "remote.SSH.remotePlatform": {
+        "VPS-Turkey": "linux"
+    },
     "git.autofetch": true,
-    "window.zoomLevel": 1,
     "[python]": {
       "editor.defaultFormatter": "ms-python.autopep8",
       "editor.formatOnSave": true
