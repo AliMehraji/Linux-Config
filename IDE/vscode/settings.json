@@ -12,8 +12,6 @@
     "scm.inputFontSize": 15,
     "editor.fontWeight": "normal",
     "terminal.integrated.fontSize": 15,
-    "python.envFile": "${workspaceFolder}/.venv",
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
     "python.linting.enabled": true,
     "python.linting.pylintEnabled": true,
     "python.analysis.completeFunctionParens": true,
