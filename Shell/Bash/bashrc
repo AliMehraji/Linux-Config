@@ -151,9 +151,9 @@ alias Dxray='$HOME/Xray/xray-proxy-vpn.sh $HOME/V2ray-Cli/DE-Vless-KCP.json'
 
 alias Tv2ray='$HOME/V2ray-Cli/v2ray-Proxy-Vpn-V5.sh $HOME/V2ray-Cli/TR-Vless-KCP.json'
 alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/V2ray-Cli/TR-ShadowSocks-gRPC.json'
-# ------ Joker ---------------
-alias Dbrook='joker brook client -s 5.75.201.128:49802 -p Ali@Mehr9567! --socks5 0.0.0.0:58297'
-alias Tbrook='joker brook client -s 185.136.206.186:49802 -p Ali@Mehr9567! --socks5 0.0.0.0:58297'
 
 export PATH=$HOME/.nami/bin:$PATH
 export PATH=$HOME/.nami/bin:$PATH
+
+# ------ Open Files in CLI like MacOs -------
+alias open='gio open'
