@@ -126,7 +126,7 @@ source "$OSH"/oh-my-bash.sh
 # fi
 
 export EDITOR="vim"
-export PATH=$HOME/.nami/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/.nami/bin:$HOME/.local/bin:/usr/local/go/bin:$PATH
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -145,15 +145,14 @@ export PATH=$HOME/.nami/bin:$HOME/.local/bin:$PATH
 alias code='code --proxy-server=socks5://127.0.0.1:10808'
 alias re='reboot'
 alias po='shutdown --poweroff'
-# ------ V2ray ---------------
-alias Dv2ray='$HOME/V2ray-Cli/v2ray-Proxy-Vpn-V5.sh $HOME/V2ray-Cli/DE-Vless-KCP.json'
-alias Dxray='$HOME/Xray/xray-proxy-vpn.sh $HOME/V2ray-Cli/DE-Vless-KCP.json'
 
-alias Tv2ray='$HOME/V2ray-Cli/v2ray-Proxy-Vpn-V5.sh $HOME/V2ray-Cli/TR-Vless-KCP.json'
-alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/V2ray-Cli/TR-ShadowSocks-gRPC.json'
+# ------ Xray ---------------
+
+alias Dxray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/DE-vmess-KCP.json'
+alias DxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/DE-Vless-gRPC-Reality.json'
+
+alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-KCP.json'
+alias TxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-gRPC-Reality.json'
 
 export PATH=$HOME/.nami/bin:$PATH
-export PATH=$HOME/.nami/bin:$PATH
-
-# ------ Open Files in CLI like MacOs -------
 alias open='gio open'
