@@ -1,0 +1,35 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=application name
+Exec=/path/to/application
+Icon=/path/to/application/icon.png
+Terminal=false
+Categories=Development;
+
+
+
+# ==================== Postman ==========================
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Postman
+Exec=/usr/lib64/Postman/Postman
+Icon=/usr/lib64/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Categories=Development;
+
+
+# ==================== Nekoray ==========================
+
+[Desktop Entry]
+Name=Nekoray
+StartupWMClass=Nekoray
+Comment=Nekoray Proxy Manager
+GenericName=Nekory Client for Linux
+Exec=/usr/lib64/nekoray/launcher
+Icon=/usr/lib64/nekoray/nekoray.png
+Type=Application
+Categories=GNOME;GTK;
+
