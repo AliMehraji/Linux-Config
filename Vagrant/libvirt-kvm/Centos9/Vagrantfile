@@ -3,11 +3,11 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provision "shell", inline: <<-SHELL
-    echo 'YOUR-Public-SSH-Key' >> /home/vagrant/.ssh/authorized_keys
+    echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExD+rW9oesmEZ8UusiCc2vYCcUEuyQoGiJMzPKByUVf ali@BB-Fedora' >> /home/vagrant/.ssh/authorized_keys
     chmod 600 /home/vagrant/.ssh/authorized_keys
     chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
     echo 'fastestmirror=true' >> /etc/dnf/dnf.conf
-    echo 'proxy=socks5h://192.168.1.106:10808' >> /etc/dnf/dnf.conf
+    echo 'proxy=socks5h://192.168.20.178:10808' >> /etc/dnf/dnf.conf
   SHELL
 
   config.vm.provider :libvirt do |libvirt|

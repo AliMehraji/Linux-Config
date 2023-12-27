@@ -1,15 +1,18 @@
-#Enable the subsequent settings only in interactive sessions
+# Enable the subsequent settings only in interactive sessions
 case $- in
   *i*) ;;
     *) return;;
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='/home/robot/.oh-my-bash'
+export OSH="${HOME}/.oh-my-bash"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="robbyrussell"
+
+# If you set OSH_THEME to "random", you can ignore themes you don't like.
+# OMB_THEME_RANDOM_IGNORED=("powerbash10k" "wanelo")
 
 # Uncomment the following line to use case-sensitive completion.
 # OMB_CASE_SENSITIVE="true"
@@ -125,8 +128,6 @@ source "$OSH"/oh-my-bash.sh
 #   export EDITOR='mvim'
 # fi
 
-export EDITOR="vim"
-export PATH=$HOME/.nami/bin:$HOME/.local/bin:/usr/local/go/bin:$PATH
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -142,7 +143,7 @@ export PATH=$HOME/.nami/bin:$HOME/.local/bin:/usr/local/go/bin:$PATH
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
-alias code='code --proxy-server=socks5://127.0.0.1:10808'
+alias code='code --proxy-server=socks5://192.168.88.8:10808'
 alias re='reboot'
 alias po='shutdown --poweroff'
 
@@ -156,3 +157,4 @@ alias TxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-gRPC-Reality.json
 
 export PATH=$HOME/.nami/bin:$PATH
 alias open='gio open'
+

@@ -1,5 +1,5 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "debian/bookworm64"
+  config.vm.box = "generic/ubuntu2204"
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provision "shell", inline: <<-SHELL
@@ -16,20 +16,20 @@ Vagrant.configure("2") do |config|
   end
 
   # App Server 1
-  config.vm.define "Debian-1" do |app1|
-    app1.vm.hostname = "Debian-1.Fun"
+  config.vm.define "Ubuntu-1" do |app1|
+    app1.vm.hostname = "Ubuntu-1.Fun"
     app1.vm.network :private_network, type: "static", ip: "192.168.122.12", bridge: "virbr0"
   end
 
   # App Server 2
-  config.vm.define "Debian-2" do |app2|
-    app2.vm.hostname = "Debian-2.Fun"
+  config.vm.define "Ubuntu-2" do |app2|
+    app2.vm.hostname = "Ubuntu-1.Fun"
     app2.vm.network :private_network, type: "static", ip: "192.168.122.13", bridge: "virbr0"
   end
 
   # App Server 3
-  config.vm.define "Debian-3" do |app3|
-    app3.vm.hostname = "Debian-3.Fun"
+  config.vm.define "Ubuntu-3" do |app3|
+    app3.vm.hostname = "Ubuntu-1.Fun"
     app3.vm.network :private_network, type: "static", ip: "192.168.122.14", bridge: "virbr0"
   end
 
