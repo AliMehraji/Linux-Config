@@ -155,4 +155,5 @@ alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-KCP.json'
 alias TxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-gRPC-Reality.json'
 
 export PATH=$HOME/.nami/bin:$PATH
+export EDITOR="vim"
 alias open='gio open'
