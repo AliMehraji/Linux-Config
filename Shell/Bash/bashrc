@@ -151,7 +151,7 @@ alias po='shutdown --poweroff'
 alias Dxray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/DE-vmess-KCP.json'
 alias DxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/DE-Vless-gRPC-Reality.json'
 
-alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-KCP.json'
+alias Txray='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vmess-gRPC.json'
 alias TxgRPC='$HOME/Xray/xray-proxy-vpn.sh $HOME/Xray/TR-Vless-gRPC-Reality.json'
 
 export PATH=$HOME/.nami/bin:$PATH
