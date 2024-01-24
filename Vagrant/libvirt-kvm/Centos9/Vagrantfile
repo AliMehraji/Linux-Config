@@ -3,7 +3,7 @@ Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
   config.vm.synced_folder ".", "/vagrant", disabled: true
   config.vm.provision "shell", inline: <<-SHELL
-    echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExD+rW9oesmEZ8UusiCc2vYCcUEuyQoGiJMzPKByUVf ali@BB-Fedora' >> /home/vagrant/.ssh/authorized_keys
+    echo 'ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIL+CG3Byt/LFRXMM75UoFO249x4fbIIUFeMWdvc3iffu robot@Fedora-FunLife' >> /home/vagrant/.ssh/authorized_keys
     chmod 600 /home/vagrant/.ssh/authorized_keys
     chown vagrant:vagrant /home/vagrant/.ssh/authorized_keys
     echo 'fastestmirror=true' >> /etc/dnf/dnf.conf
@@ -19,13 +19,13 @@ Vagrant.configure("2") do |config|
   # App Server 1
   config.vm.define "CentOS-1" do |app1|
     app1.vm.hostname = "CentOS-1.Fun"
-    app1.vm.network :private_network, type: "static", ip: "192.168.122.10", bridge: "virbr0"
+    app1.vm.network :private_network, type: "static", ip: "192.168.122.11", bridge: "virbr0"
   end
 
   # App Server 2
   config.vm.define "CentOS-2" do |app2|
     app2.vm.hostname = "CentOS-2.Fun"
-    app2.vm.network :private_network, type: "static", ip: "192.168.122.11", bridge: "virbr0"
+    app2.vm.network :private_network, type: "static", ip: "192.168.122.12", bridge: "virbr0"
   end
 
 end
