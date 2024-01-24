@@ -1,0 +1,10 @@
+{
+    "server":"Your-Server-IP",
+    "server_port":54679,
+    "local_address": "0.0.0.0",
+    "local_port":10808,
+    "password":"Ky81bdd7q9k8hkQ1M8bp0Q==",
+    "method":"aes-256-gcm",
+    "fast_open": true,
+    "obfs":"http_simple"
+}

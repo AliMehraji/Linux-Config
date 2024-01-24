@@ -1,0 +1,13 @@
+{
+    "server":"0.0.0.0",
+    "server_ipv6":"::",
+    "server_port":9000,
+    "password":"Ky81bdd7q9k8hkQ1M8bp0Q==",
+    "timeout":300,
+    "method":"aes-256-gcm",
+    "nameserver":"8.8.8.8",
+    "mode":"tcp_and_udp",
+    "fast_open":true,
+    "obfs":"http_simple",
+    "workers": 3
+}
