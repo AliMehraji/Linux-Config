@@ -37,6 +37,10 @@ Config File at `/etc/shadowsocks-rust/config.json`
 
 ### Run Server via Docekr Container 
 
+Notice:
+
+> Enable IPV6 to Docker be able to use IPV6 , [Docker IPV6](https://docs.docker.com/config/daemon/ipv6/#use-ipv6-for-the-default-bridge-network)
+
 ```bash
 docker pull teddysun/shadowsocks-rust
 ```
