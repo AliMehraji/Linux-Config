@@ -143,6 +143,7 @@ source "$OSH"/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 # alias ohmybash="mate ~/.oh-my-bash"
 
+alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
 alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
@@ -161,3 +162,6 @@ alias kctx='kubectx'
 complete -o default -F __start_kubectl k
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+
+complete -C /home/ali/.minio-binaries/mc mc
