@@ -5,7 +5,7 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='/home/ali/.oh-my-bash'
+export OSH="$HOME/.oh-my-bash"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
@@ -164,4 +164,4 @@ complete -o default -F __start_kubectl k
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 
-complete -C /home/ali/.minio-binaries/mc mc
+complete -C $HOME/.minio-binaries/mc mc
