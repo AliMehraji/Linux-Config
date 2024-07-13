@@ -146,7 +146,7 @@ source "$OSH"/oh-my-bash.sh
 alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
-alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
+#alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
 alias shadowrust="sslocal --config $HOME/ShadowSocks-rust/config.json -d"
 
 
@@ -156,12 +156,14 @@ alias open='gio open'
 
 
 # ---- K8s --------
+
 source <(kubectl completion bash)
 alias k='kubectl'
 alias kctx='kubectx'
 complete -o default -F __start_kubectl k
 
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# ---- FuzzyFinder (fzf) --------
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 complete -C $HOME/.minio-binaries/mc mc

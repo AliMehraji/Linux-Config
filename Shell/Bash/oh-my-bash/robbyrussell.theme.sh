@@ -39,7 +39,7 @@ function _omb_theme_PROMPT_COMMAND() {
     local arrow="${arrow_color}⮞${_omb_prompt_reset_color}"
     local hostname="${_omb_prompt_normal_white}\u@\h"
 
-    PS1="${python_venv}${_omb_prompt_reset_color}${hostname} ${arrow} ${base_directory} "
+    PS1="${python_venv}${_omb_prompt_reset_color}[${hostname}] ${arrow} ${base_directory} "
 
     local scm_info=$(scm_prompt_info)
 
