@@ -1,5 +1,4 @@
 {
-    "workbench.colorTheme": "One Dark Pro Darker",
     "git.autofetch": true,
     "editor.fontSize": 17,
     "editor.fontFamily": "Fira Code",
@@ -39,5 +38,10 @@
     },
     "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
     "oneDarkPro.editorTheme": "One Dark Pro Darker",
+    "settingsSync.ignoredExtensions": [
+        "georgewfraser.vscode-javac"
+    ],
+    "extensions.ignoreRecommendations": true,
+    "workbench.colorTheme": "One Dark Pro Darker",
     
 }
