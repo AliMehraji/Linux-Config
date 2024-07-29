@@ -76,7 +76,7 @@ OSH_THEME="robbyrussell"
 OMB_USE_SUDO=true
 
 # To enable/disable display of Python virtualenv and condaenv
-# OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
+OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
 # OMB_PROMPT_SHOW_PYTHON_VENV=false # disable
 
 # Which completions would you like to load? (completions can be found in ~/.oh-my-bash/completions/*)
@@ -87,6 +87,8 @@ completions=(
   git
   composer
   ssh
+  helm
+  brook
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -158,7 +160,6 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-
 alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
@@ -168,18 +169,16 @@ alias shadowrust="sslocal --config $HOME/ShadowSocks-rust/config.json -d"
 
 export PATH=$HOME/.nami/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.minio-binaries:/usr/local/go/bin:$PATH
 export EDITOR="vim"
+export GOROOT=$HOME/go
 alias open='gio open'
 
-
 # ---- K8s --------
-
 source <(kubectl completion bash)
 alias k='kubectl'
 alias kctx='kubectx'
 complete -o default -F __start_kubectl k
 
 # ---- FuzzyFinder (fzf) --------
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 complete -C $HOME/.minio-binaries/mc mc

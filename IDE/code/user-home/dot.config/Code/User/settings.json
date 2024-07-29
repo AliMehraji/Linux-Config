@@ -43,5 +43,6 @@
     ],
     "extensions.ignoreRecommendations": true,
     "workbench.colorTheme": "One Dark Pro Darker",
+    "explorer.confirmDelete": false,
     
 }
