@@ -163,7 +163,7 @@ shopt -s checkwinsize
 alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
-#alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
+alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
 alias shadowrust="sslocal --config $HOME/ShadowSocks-rust/config.json -d"
 
 
