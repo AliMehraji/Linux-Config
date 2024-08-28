@@ -178,6 +178,8 @@ alias k='kubectl'
 alias kctx='kubectx'
 complete -o default -F __start_kubectl k
 
+# ---- ArgoCD --------
+source <(argocd completion bash)
 # ---- FuzzyFinder (fzf) --------
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
