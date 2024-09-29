@@ -85,10 +85,9 @@ OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
 # Add wisely, as too many completions slow down shell startup.
 completions=(
   git
-  composer
   ssh
-  helm
-  brook
+  argocd
+  kubectl
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -164,23 +163,26 @@ alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
 alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
-alias shadowrust="sslocal --config $HOME/ShadowSocks-rust/config.json -d"
 
 
 export PATH=$HOME/.nami/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.minio-binaries:/usr/local/go/bin:$PATH
 export EDITOR="vim"
-export GOROOT=$HOME/go
 alias open='gio open'
 
 # ---- K8s --------
-source <(kubectl completion bash)
+
+# source <(kubectl completion bash)
+# complete -o default -F __start_kubectl k
+
 alias k='kubectl'
 alias kctx='kubectx'
-complete -o default -F __start_kubectl k
 
 # ---- ArgoCD --------
-source <(argocd completion bash)
+
+# source <(argocd completion bash)
+
 # ---- FuzzyFinder (fzf) --------
+
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 complete -C $HOME/.minio-binaries/mc mc
