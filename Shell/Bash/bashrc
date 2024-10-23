@@ -180,9 +180,16 @@ alias kctx='kubectx'
 # ---- ArgoCD --------
 
 # source <(argocd completion bash)
+# Argo WorkFlow
+source <(argo completion bash)
+complete -C $HOME/.minio-binaries/mc mc
 
 # ---- FuzzyFinder (fzf) --------
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+eval "$(fzf --bash)"
 
-complete -C $HOME/.minio-binaries/mc mc
+
+export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
+export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
+export FZF_COMPLETION_OPTS='--border --info=inline'
