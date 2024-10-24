@@ -1,7 +1,4 @@
-"filetype off                    " required
-filetype plugin indent on       " required
-syntax on clear
-
+" Basic Settings
 set nocompatible                " required
 set noexpandtab
 set tabstop=4
@@ -10,50 +7,47 @@ set showmatch                   " Highlight matches {[()]}
 set history=1000
 set undolevels=1000
 set wildignore=*.swp,*.bak,*.pyc
-set ignorecase
-"set spell
+set ignorecase smartcase
 set encoding=utf-8
 set termguicolors
 set nowrap
 
-hi SpellBad term=reverse ctermbg=red
-set showcmd "shows current command in the statusline
-set exrc    "read <cwd>/.vimrc
-set ttyfast   "more characters will be sent to the screen for redrawing
-set wildmenu  "a better menu in command mode
+" Display Settings
+set hlsearch                    " Highlights search results
+set showcmd                     " Shows current command in the statusline
+set exrc                        " Read <cwd>/.vimrc
+set ttyfast                     " More characters will be sent to the screen for redrawing
+set wildmenu                    " A better menu in command mode
 set wildmode=longest:full,full
-"set colorcolumn=81
-highlight ColorColumn ctermbg=235 guibg=#2c2d27
-
-set hlsearch  "highlights search results
-hi Search ctermbg=DarkGray
-hi Search ctermfg=Red
-hi QuickFixLine term=reverse ctermbg=52  "change QuickFix selected line color
-
 set laststatus=2
 set statusline=%f\:%l\:%c\ \[%L\]
 
-filetype plugin indent on
+" Color Settings
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+hi SpellBad term=reverse ctermbg=red
+hi Search ctermbg=DarkGray
+hi Search ctermfg=Red
+hi QuickFixLine term=reverse ctermbg=52  " Change QuickFix selected line color
+
+" Syntax and Filetype Settings
+syntax on
+" filetype off                    " required
+filetype plugin indent on       " required
+
+" Runtime Paths
 set runtimepath^=~/.fzf
 set runtimepath^=~/.vim/plugged/fzf.vim
 
+" Grep Program
 set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 
+" Vundle Plugin Manager
 " ======== set the runtime path to include Vundle and initialize ====== 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 
-" alternatively, pass a path where Vundle should install plugins
-" call vundle"begin('~/some/path/here')
-" 
 " ======= let Vundle manage Vundle, required ==========================
-
 " ======= add all your plugins here ===================================
-
-" (note older versions of Vundle used Bundle instead of Plugin)
-
 call vundle#begin()            " required
-
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
@@ -63,22 +57,20 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'sheerun/vim-polyglot'
 Bundle 'Valloric/YouCompleteMe'
-
 call vundle#end()            " required
 
+" Vim-Plug Plugin Manager
 " ===================== https://github.com/junegunn/vim-plug =====
 call plug#begin()
 " Post-update hook can be a lambda expression
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 call plug#end()
 
-
+" Customize Mapping
 " ===================== Customize mapping =========================
-
-" Mappleader is space
-let mapleader = "\<space>" 
+" Mapleader is space
+let mapleader = "\<space>"
 
 " ycm-core/YouCompleteMe
 let g:Ycm_python_binary_path='python3'
@@ -91,31 +83,29 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 " Commenting Lines 
 nnoremap <Leader># :normal I#<Esc>
 
-
+" Python Settings
 " ======= Python Settings ==================================================
-"
 " Python PEP8
 au BufNewFile,BufRead *.py
-    \set textwidth=79
-    \set expandtab
-    \set autoindent
-    \set fileformat=unix
+    \ set textwidth=79
+    \ set expandtab
+    \ set autoindent
+    \ set fileformat=unix
 
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/ 
- highlight BadWhitespace ctermbg=red guibg=darkred
+au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+highlight BadWhitespace ctermbg=red guibg=darkred
 
 let python_highlight_all=1
-
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 
+" Atom One Dark Scheme
 " ======================= atom one dark scheme ==============================
-
 let g:onedark_hide_endofbuffer=1
 let g:onedark_termcolors=256
 let g:onedark_terminal_italics=1
 colorscheme onedark
 
-" JS, HTML, CSS, YAML, JSON
+" JS, HTML, CSS, YAML, JSON Settings
 au BufNewFile,BufRead *.js, *.html, *.css, *.yml, *.yaml, *.json
     \ set noexpandtab
     \ set tabstop=2
@@ -128,14 +118,14 @@ set foldlevel=99
 " Enable Folding with the spacebar
 nnoremap <space> za
 
+" Shell Script Template
 " +========= Shell Script Template ===========================================
-"
 au bufnewfile *.sh 0r $HOME/.vim/SHELL_HEADER.temp
 "au bufnewfile *.yml 0r $HOME/.vim/YAML.temp
 "au bufnewfile *.yaml 0r $HOME/.vim/YAML.temp
 
+" YAML Configs
 " +========= YAML Configs ====================================================
-"
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
@@ -162,11 +152,11 @@ syn keyword yamlConstant TRUE True true YES Yes yes ON On on
 syn keyword yamlConstant FALSE False false NO No no OFF Off off
 
 syn match  yamlKey	"\w\+\ze\s*:"
+
 syn match  yamlAnchor	"&\S\+"
 syn match  yamlAlias	"*\S\+"
 
-" Setupt the hilighting links
-
+" Setup the highlighting links
 hi link yamlConstant Keyword
 hi link yamlIndicator PreCondit
 hi link yamlAnchor	Function
