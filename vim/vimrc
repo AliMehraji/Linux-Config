@@ -2,7 +2,7 @@
 set nocompatible                " required
 set noexpandtab
 set tabstop=4
-set number relativenumber       " Show line number
+set number                      " Show line number
 set showmatch                   " Highlight matches {[()]}
 set history=1000
 set undolevels=1000
