@@ -126,6 +126,8 @@ au bufnewfile *.sh 0r $HOME/.vim/SHELL_HEADER.temp
 
 " YAML Configs
 " +========= YAML Configs ====================================================
+let g:syntastic_yaml_checkers = ['yamllint']
+
 if version < 600
   syntax clear
 elseif exists("b:current_syntax")
