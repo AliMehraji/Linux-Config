@@ -161,7 +161,8 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias re='reboot'
 alias po='shutdown --poweroff'
 #alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
