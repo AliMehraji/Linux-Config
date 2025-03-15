@@ -83,14 +83,13 @@ nnoremap <Leader>nf :NERDTreeFind<CR>
 " Commenting Lines 
 nnoremap <Leader># :normal I#<Esc>
 
-" Python Settings
 " ======= Python Settings ==================================================
 " Python PEP8
 au BufNewFile,BufRead *.py
     \ set textwidth=79
-    \ set expandtab
-    \ set autoindent
-    \ set fileformat=unix
+    \ expandtab
+    \ autoindent
+    \ fileformat=unix
 
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
 highlight BadWhitespace ctermbg=red guibg=darkred
