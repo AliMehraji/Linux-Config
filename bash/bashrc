@@ -86,7 +86,6 @@ OMB_PROMPT_SHOW_PYTHON_VENV=true  # enable
 completions=(
   git
   ssh
-  argocd
   kubectl
   helm
   terraform
@@ -107,6 +106,7 @@ aliases=(
 plugins=(
   git
   bashmarks
+  ansible
 )
 
 # Which plugins would you like to conditionally load? (plugins can be found in ~/.oh-my-bash/plugins/*)
