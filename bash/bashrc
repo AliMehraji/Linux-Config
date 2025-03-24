@@ -124,7 +124,7 @@ source "$OSH"/oh-my-bash.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-Preferred editor for local and remote sessions
+# Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -184,12 +184,13 @@ complete -o default -F __start_kubectl k
 
 # source <(argocd completion bash)
 # Argo WorkFlow
-#source <(argo completion bash)
+# source <(argo completion bash)
 
 
 # ---- FuzzyFinder (fzf) --------
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
 eval "$(fzf --bash)"
 export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
@@ -198,7 +199,7 @@ export FZF_COMPLETION_OPTS='--border --info=inline'
 
 complete -C $HOME/.minio-binaries/mc mc
 
-#export GOPROXY=https://goproxy.cn
+# export GOPROXY=https://goproxy.cn
 
 # ---- git diff with vim --------
 
