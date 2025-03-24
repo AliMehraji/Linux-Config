@@ -124,12 +124,12 @@ source "$OSH"/oh-my-bash.sh
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -161,41 +161,44 @@ HISTFILESIZE=2000
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
-alias vi='nvim'
-alias vim='nvim'
+alias vi='vim'
 alias re='reboot'
 alias po='shutdown --poweroff'
-#alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
+alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
+alias curlx='curl -x "socks5h://127.0.0.1:10808"'
 
 
-export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.minio-binaries:/usr/local/go/bin:$HOME/.nami/bin/:$PATH
-export EDITOR="vim"
+export PATH=$HOME/.nami/bin:$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.minio-binaries:/usr/local/go/bin:$HOME/go/bin:$PATH
+# export EDITOR="vim"
 alias open='gio open'
 
 # ---- K8s --------
 
-# source <(kubectl completion bash)
-# complete -o default -F __start_kubectl k
-
 alias k='kubectl'
 alias kctx='kubectx'
+# the completion is enabled in completion section
+# source <(kubectl completion bash)
+complete -o default -F __start_kubectl k
 
 # ---- ArgoCD --------
 
 # source <(argocd completion bash)
 # Argo WorkFlow
-source <(argo completion bash)
-complete -C $HOME/.minio-binaries/mc mc
+#source <(argo completion bash)
+
 
 # ---- FuzzyFinder (fzf) --------
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 eval "$(fzf --bash)"
-
-
 export FZF_DEFAULT_OPTS='--height 40% --tmux bottom,40% --layout reverse --border top'
 export FZF_CTRL_T_OPTS="--walker-skip .git,node_modules,target --preview 'bat -n --color=always {}' --bind 'ctrl-/:change-preview-window(down|hidden|)'"
 export FZF_COMPLETION_OPTS='--border --info=inline'
+
+
+complete -C $HOME/.minio-binaries/mc mc
+
+#export GOPROXY=https://goproxy.cn
 
 # ---- git diff with vim --------
 
