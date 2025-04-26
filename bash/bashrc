@@ -89,6 +89,7 @@ completions=(
   kubectl
   helm
   terraform
+  kubectx
 )
 
 # Which aliases would you like to load? (aliases can be found in ~/.oh-my-bash/aliases/*)
@@ -163,8 +164,8 @@ shopt -s checkwinsize
 
 alias vi='vim'
 alias re='reboot'
-alias po='shutdown --poweroff'
-alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
+alias po='sudo shutdown --poweroff'
+#alias code='code --proxy-server="socks5h://127.0.0.1:10808"'
 alias curlx='curl -x "socks5h://127.0.0.1:10808"'
 
 
@@ -179,6 +180,7 @@ alias kctx='kubectx'
 # the completion is enabled in completion section
 # source <(kubectl completion bash)
 complete -o default -F __start_kubectl k
+complete -F _kube_contexts kubectx kctx
 
 # ---- ArgoCD --------
 
