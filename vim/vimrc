@@ -48,14 +48,23 @@ set rtp+=~/.vim/bundle/Vundle.vim
 " ======= let Vundle manage Vundle, required ==========================
 " ======= add all your plugins here ===================================
 call vundle#begin()            " required
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'sheerun/vim-polyglot'
+"Plugin 'sheerun/vim-polyglot'
+Plugin 'pearofducks/ansible-vim'
+Plugin 'fatih/vim-hclfmt'
+Plugin 'fatih/vim-go'
+Plugin 'elzr/vim-json'
+Plugin 'stephpy/vim-yaml'
+Plugin 'cespare/vim-toml'
+Plugin 'hashivim/vim-terraform'
+Plugin 'hashivim/vim-packer'
+Plugin 'rust-lang/rust.vim'
 Bundle 'Valloric/YouCompleteMe'
 call vundle#end()            " required
 
