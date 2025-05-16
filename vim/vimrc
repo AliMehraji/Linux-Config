@@ -46,11 +46,9 @@ set grepprg=rg\ --vimgrep\ --smart-case\ --follow
 " ======= add all your plugins here ===================================
 call vundle#begin()            " required
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'vim-scripts/indentpython.vim'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 call vundle#end()            " required
 
 " Vim-Plug Plugin Manager
@@ -59,7 +57,7 @@ call plug#begin()
 " Post-update hook can be a lambda expression
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py --go-completer' }
 " Using a tagged release; wildcard allowed (requires git 1.9.2 or above)
 Plug 'fatih/vim-go', { 'tag': '*' }
 call plug#end()
